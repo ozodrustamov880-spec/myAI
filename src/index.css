@@ -1,0 +1,84 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --bg-primary: #ffffff;
+    --bg-surface: #ffffff;
+    --bg-surface-variant: #f0f4f9;
+    --bg-surface-subtle: #f8fafd;
+    --border-color: #dadce0;
+    --border-subtle: #e8eaed;
+    --text-primary: #1f1f1f;
+    --text-secondary: #444746;
+    --text-tertiary: #747775;
+    --accent-blue: #0b57d0;
+    --accent-blue-hover: #0842a0;
+    --accent-blue-surface: #e8f0fe;
+    --google-blue: #1a73e8;
+    --google-red: #ea4335;
+    --google-yellow: #fbbc05;
+    --google-green: #34a853;
+  }
+
+  .dark {
+    --bg-primary: #131314;
+    --bg-surface: #1e1f20;
+    --bg-surface-variant: #282a2c;
+    --bg-surface-subtle: #18191a;
+    --border-color: #333538;
+    --border-subtle: #282a2c;
+    --text-primary: #e3e3e3;
+    --text-secondary: #c4c7c5;
+    --text-tertiary: #8e918f;
+    --accent-blue: #a8c7fa;
+    --accent-blue-hover: #d3e3fd;
+    --accent-blue-surface: #1d2e4a;
+    --google-blue: #8ab4f8;
+    --google-red: #f28b82;
+    --google-yellow: #fdd663;
+    --google-green: #81c995;
+  }
+
+  body {
+    font-family: 'Google Sans', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', 'Roboto Mono', Menlo, Monaco, Consolas, monospace;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(180, 184, 190, 0.5);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(140, 144, 150, 0.7);
+}
+
+/* Google-like card elevation */
+.google-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 1px 2px 0 rgba(60,64,67,0.06), 0 1px 3px 1px rgba(60,64,67,0.03);
+}
+
+.google-input-shadow {
+  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.12);
+}

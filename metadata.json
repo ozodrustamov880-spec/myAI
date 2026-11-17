@@ -1,0 +1,6 @@
+{
+  "name": "AI Studio - Gemini Developer Platform & Builder",
+  "description": "Professional AI development platform with interactive playground, streaming responses, full-stack app builder with live multi-device preview, code editor, image generation, and project management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
